@@ -52,9 +52,18 @@ SPACING SYSTEM (px)
   transition: all 0.4s;
 
 */
+
 /*******************************/
 /* GENERAL REUSABLE COMPONENTS */
 /*******************************/
+
+$color-primary: #55c57a;
+$color-primary--light: #7ed56f;
+$color-primary--dark: #28b483;
+
+$color-white: #fff;
+$color-grey-dark: #777;
+
 * {
   margin: 0;
   padding: 0;
@@ -70,13 +79,14 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: #777;
+  color: $color-grey-dark;
   padding: 3.2rem;
 }
 
 .heading-primary {
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
+
   margin-bottom: 6.4rem;
 }
 
@@ -88,24 +98,28 @@ body {
   padding: 1.6rem 3.2rem;
   border-radius: 100px;
   font-size: 1.6rem;
+
   transition: all 0.2s;
+
   position: relative;
 }
 
 .btn:hover {
   transform: translateY(-0.4rem);
+
   box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
   transform: translateY(-0.2rem);
+
   box-shadow: 0 0.8rem 1.2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn--white:link,
 .btn--white:visited {
-  background-color: #fff;
-  color: #777;
+  background-color: $color-white;
+  color: $color-grey-dark;
 }
 
 .btn::after {
@@ -114,7 +128,9 @@ body {
   height: 100%;
   width: 100%;
   border-radius: 100px;
+
   transition: all 0.4s;
+
   position: absolute;
   top: 0;
   left: 0;
@@ -122,7 +138,7 @@ body {
 }
 
 .btn--white::after {
-  background-color: #fff;
+  background-color: $color-white;
 }
 
 .btn:hover::after {
@@ -133,12 +149,20 @@ body {
 /*******************************/
 /* HEADER */
 /*******************************/
+
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)), url(../img/photos/hero.jpg);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary--light, 0.8),
+      rgba($color-primary--dark, 0.8)
+    ),
+    url(../img/photos/hero.jpg);
   background-size: cover;
   background-position: top;
+
   position: relative;
+
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
@@ -157,6 +181,7 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   text-align: center;
 }
 
@@ -165,6 +190,7 @@ body {
   font-size: 6.4rem;
   font-weight: 400;
   letter-spacing: 2.4rem;
+
   /* animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out; */
@@ -177,6 +203,7 @@ body {
   font-size: 2.4rem;
   font-weight: 700;
   letter-spacing: 1.6rem;
+
   /* animation-name: moveInRight;
   animation-duration: 1s;
   animation-timing-function: ease-out; */
@@ -192,42 +219,49 @@ body {
 /*******************************/
 /* ANIMATIONS */
 /*******************************/
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
     transform: translateX(-10rem);
   }
+
   80% {
     transform: translateX(1rem);
   }
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-  80% {
-    transform: translateX(-1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-/* ANIMATION FOR THE HEADER BUTTON */
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem);
-  }
+
   100% {
     opacity: 1;
     transform: translate(0);
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* ANIMATION FOR THE HEADER BUTTON */
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
