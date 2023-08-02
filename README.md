@@ -19,3 +19,6 @@ npm run install
 ```
 
 Pour installer les dépendances du projet telles que SASS.
+
+Si la commande ne fonctionne pas, c'est que NPM n'est pas installé.
+Veuillez télécharger (NodeJS)[https://nodejs.org/fr] pour installer NPM.
