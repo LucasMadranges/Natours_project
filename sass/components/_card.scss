@@ -6,7 +6,7 @@
   &__side {
     height: 52rem;
     transition: all 0.8s ease;
-    border-radius: 3px;
+    border-radius: $default-border-radius;
     box-shadow: 0 1.2rem 4.8rem rgba($color-black, 0.15);
     overflow: hidden;
 
