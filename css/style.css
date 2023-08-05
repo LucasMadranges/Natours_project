@@ -433,7 +433,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 20%);
+  transform: translate(-50%, -50%);
   color: #fff;
   text-transform: uppercase;
   font-size: 1.6rem;
@@ -547,6 +547,78 @@ body {
   opacity: 1;
 }
 
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup__content {
+  background-color: #fff;
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: table;
+  border-radius: 3px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.25);
+  transition: all 0.5s 0.2s;
+}
+.popup__left {
+  width: 33%;
+  display: table-cell;
+}
+.popup__right {
+  width: 67%;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 3.2rem 4.8rem;
+}
+.popup__img {
+  display: block;
+  width: 100%;
+}
+.popup__text {
+  font-size: 1.4rem;
+  margin-bottom: 4rem;
+  column-count: 2;
+  column-gap: 3.2rem;
+  column-rule: 1px solid #eee;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.popup:target .popup__content {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+.popup__close:link, .popup__close:visited {
+  color: #777;
+  position: absolute;
+  top: 2.4rem;
+  right: 2.4rem;
+  font-size: 3.2rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+  line-height: 1;
+}
+.popup__close:hover {
+  color: #55c57a;
+}
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)), url(../img/photos/hero.jpg);
@@ -565,9 +637,10 @@ body {
 }
 .header__text-box {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  top: 40%;
   text-align: center;
 }
 
@@ -690,13 +763,12 @@ body {
 }
 .navigation__nav {
   height: 100vh;
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 4;
   opacity: 0;
-  width: 300%;
+  width: 0;
   transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 .navigation__list {
