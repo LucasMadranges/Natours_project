@@ -122,16 +122,22 @@
           <div class="col-1-of-2">
             <div class="composition">
               <img
+                srcset="img/photos/nat-1.jpg 300vw, img/photos/nat-1-large.jpg 1000vw"
+                sizes="(max-width: 56.25rem) 20vw, (max-width: 37.5rem) 30vw, 300px"
                 class="composition__photo composition__photo--p1"
                 src="img/photos/nat-1-large.jpg"
                 alt="Photo 1"
               />
               <img
+                srcset="img/photos/nat-2.jpg 300vw, img/photos/nat-2-large.jpg 1000vw"
+                sizes="(max-width: 56.25rem) 20vw, (max-width: 37.5rem) 30vw, 300px"
                 class="composition__photo composition__photo--p2"
                 src="img/photos/nat-2-large.jpg"
                 alt="Photo 2"
               />
               <img
+                srcset="img/photos/nat-3.jpg 300vw, img/photos/nat-3-large.jpg 1000vw"
+                sizes="(max-width: 56.25rem) 20vw, (max-width: 37.5rem) 30vw, 300px"
                 class="composition__photo composition__photo--p3"
                 src="img/photos/nat-3-large.jpg"
                 alt="Photo 3"
@@ -484,11 +490,24 @@
 
     <footer class="footer">
       <div class="footer__logo-box u-margin-bottom-big">
-        <img
-          src="img/logos/logo-green-2x.png"
-          alt="Full logo"
-          class="footer__logo"
-        />
+        <picture>
+          <source
+            srcset="
+              img/logos/logo-green-small-1x.png 1x,
+              img/logos/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5rem)"
+          />
+          <img
+            srcset="
+              img/logos/logo-green-1x.png 1x,
+              img/logos/logo-green-2x.png 2x
+            "
+            alt="Full logo"
+            class="footer__logo"
+            src="img/logos/logo-green-2x.png"
+          />
+        </picture>
       </div>
       <div class="row">
         <div class="col-1-of-2">
@@ -535,10 +554,7 @@
 
     <div class="popup" id="popup">
       <div class="popup__content">
-        <div class="popup__left">
-          <img src="img/photos/nat-8.jpg" alt="Tour photo" class="popup__img" />
-          <img src="img/photos/nat-9.jpg" alt="Tour photo" class="popup__img" />
-        </div>
+        <div class="popup__left"></div>
         <div class="popup__right">
           <a href="#tours" class="popup__close">&times;</a>
           <h2 class="heading-secondary u-margin-bottom-small">

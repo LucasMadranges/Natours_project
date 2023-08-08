@@ -9,8 +9,12 @@ body {
     padding: 2.4rem;
   }
 
-  @include respond(phone) {
+  @include respond(tab-land) {
     padding: 1.2rem;
+  }
+
+  @include respond(phone) {
+    padding: 0;
   }
 }
 

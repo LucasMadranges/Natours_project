@@ -116,9 +116,14 @@ body {
     padding: 2.4rem;
   }
 }
-@media (max-width: 37.5em) {
+@media (max-width: 75em) {
   body {
     padding: 1.2rem;
+  }
+}
+@media (max-width: 37.5em) {
+  body {
+    padding: 0;
   }
 }
 
@@ -727,9 +732,9 @@ body {
   height: 100vh;
   width: 100%;
   position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
   z-index: 100;
   opacity: 0;
   visibility: hidden;
@@ -756,6 +761,9 @@ body {
 .popup__left {
   width: 33%;
   display: table-cell;
+  background-size: cover;
+  background-image: url(../../img/photos/nat-10.jpg);
+  background-size: cover;
 }
 .popup__right {
   width: 67%;
@@ -763,8 +771,12 @@ body {
   vertical-align: middle;
   padding: 3.2rem 4.8rem;
 }
+@media (max-width: 56.25em) {
+  .popup__right {
+    padding: 2.4rem 3.2rem;
+  }
+}
 .popup__img {
-  display: block;
   width: 100%;
 }
 .popup__text {
@@ -797,11 +809,16 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)), url(../img/photos/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)), url(../img/photos/hero-small.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+@media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 112.5em) {
+  .header {
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)), url(../img/photos/hero.jpg);
+  }
 }
 @media (max-width: 37.5em) {
   .header {
