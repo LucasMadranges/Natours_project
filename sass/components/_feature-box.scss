@@ -7,6 +7,10 @@
   box-shadow: 0 1.2rem 2.4rem rgba($color-black, 0.15);
   transition: all 0.3s;
 
+  @include respond(tab-port) {
+    padding: 2.4rem;
+  }
+
   &__icon {
     margin-bottom: 0.4rem;
     width: 6.4rem;
@@ -14,6 +18,10 @@
 
     display: inline-block;
     fill: url(#MyLinearGradient);
+
+    @include respond(tab-port) {
+      margin-bottom: 0;
+    }
   }
 
   &:hover {
