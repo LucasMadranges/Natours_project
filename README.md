@@ -15,7 +15,7 @@ Ou en mode SSH pour cloner le projet.
 Ceci fait, exécuter la commande
 
 ```
-npm run install
+npm install
 ```
 
 Pour installer les dépendances du projet telles que SASS.
